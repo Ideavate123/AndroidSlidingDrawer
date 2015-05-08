@@ -24,29 +24,4 @@ dependencies {
     compile 'com.android.support:appcompat-v7:22.1.1'
 }
 
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-
-    dependencies {
-        classpath 'com.android.tools.build:gradle:1.2.2'
-    }
-}
-
-def isReleaseBuild() {
-    return version.contains("SNAPSHOT") == false
-}
-
-allprojects {
-    version = VERSION_NAME
-    group = GROUP
-
-    repositories {
-        mavenCentral()
-    }
-}
-
-apply plugin: 'android-reporting'
-
-apply from: 'https://raw.github.com/chrisbanes/gradle-mvn-push/master/gradle-mvn-push.gradle'
+apply from: 'https://github.com/Ideavate123/AndroidSlidingDrawer/blob/master/AndroidSlidingDrawer/maven_push.gradle'
